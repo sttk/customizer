@@ -1,14 +1,14 @@
 'use strict';
 
-const vm = require('vm');
-const fs = require('fs');
+var vm = require('vm');
+var fs = require('fs');
 
-const isPlainObject = require('lodash.isplainobject');
-const isArray = require('lodash.isarray');
-const isFunction = require('lodash.isfunction');
-const isUndefined = require('lodash.isundefined');
+var isPlainObject = require('lodash.isplainobject');
+var isArray = require('lodash.isarray');
+var isFunction = require('lodash.isfunction');
+var isUndefined = require('lodash.isundefined');
 
-const semver = require('semver');
+var semver = require('semver');
 
 var Customizer = function() {
   Constructor.prototype = Customizer.prototype;

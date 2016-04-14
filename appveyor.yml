@@ -15,13 +15,15 @@ environment:
     - nodejs_version: "5"
 
 install:
-  - ps: Install-Product node $env:nodejs_version
   - npm install -g npm@latest
+  - set PATH=%APPDATA%\npm;%PATH%
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
 
 test_script:
   - node --version
   - npm --version
-  - for %%f in (test\*.js) do node_modules\.bin\lab %%f -v -m 5000 & if errorlevel 1 exit /b 1
+  - node_modules\.bin\lab test\index.js -cv
 
 build: off
 

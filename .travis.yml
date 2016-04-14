@@ -7,4 +7,4 @@ node_js:
   - "stable"
 
 script:
-  - gulp unit --js=tests/test.js --report-file=tests/test.json
+  - npm test

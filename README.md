@@ -1,4 +1,4 @@
-# Customizer [![NPM version][npm-image]][npm-url] [![Build Status][travis-image][travis-url]
+# Customizer [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 Load customizing files in which chain style options are written.
 
@@ -55,7 +55,7 @@ colors.help.command.option.description = 'gray';
 #### Load customizing files
 
 ```js
-var filepath = path.resolve(os.homedir(), '.apprc';
+var filepath = path.resolve(os.homedir(), '.apprc');
 
 customizer.customize(filepath, function(e) {
   if (e.notfound) {
@@ -72,14 +72,11 @@ customizer.customize(filepath, function(e) {
 customizer.enumerated.colors = function(key, color) {
   console.log(key + ' = "' + color + '"');
 };
-customizer.enumerated._before = function() {
-  console.log('// App customizable option list');
+customizer.enumerated[optname].before = function() {
+  console.log('// Color mapping');
 };
-customizer.enumerated[optname]._before = function() {
-  console.log('\n// Color mapping');
-};
-customizer.enumerated[optname]._after = function() {
-  console.log('\n// Color mapping');
+customizer.enumerated[optname].after = function() {
+  console.log();
 };
 
 customizer.enumerate();
@@ -87,8 +84,6 @@ customizer.enumerate();
 
 ```bash
 (console output)
-// App customizable option list
-
 // Color mapping
 colors.help.command.description = "gray"
 colors.help.command.name = "blue"
@@ -109,19 +104,11 @@ A customizable option tree.
 
 A user defined function which lists a pair of a option key and a option value. 
 
-#### customizer.enumerated._before : function(optnames : [string])
-
-A user defined function which outputs something before all options.
-
-#### customizer.enumerated._after : function(optnames : [string])
-
-A user defined function which outputs something after all options.
-
-#### customizer.enumerated[optname]._before : function(key)
+#### customizer.enumerated[optname].before : function(key)
 
 A user defined function which outputs something before a option.
 
-#### customizer.enumerated[optname]._after : function(key)
+#### customizer.enumerated[optname].after : function(key)
 
 A user defined function which outputs something after a option.
 
@@ -142,7 +129,7 @@ If `filepath` was not found, `e.notfound` is `true`. If loading `filepath` was f
 
 #### customizer.enumerate() : void
 
-Lists customizable options. To set the format of the list, define `customizer.enumerated._before/_after` and `customizer.enumerate[optname]._before/_after`.
+Lists customizable options. To set the format of the list, define `customizer.enumerate[optname]/.before/.after` functions.
 
 
 ## License

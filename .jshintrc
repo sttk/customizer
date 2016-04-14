@@ -3,7 +3,6 @@
   "curly" : true,
   "eqeqeq" : true,
   "eqnull" : true,
-  "esversion" : "6",
   "funcscope" : true,
   "freeze" : true,
   "globalstrict" : true,
@@ -15,7 +14,6 @@
   "node" : true,
   "noempty" : false,
   "quotmark" : "single",
-  "strict" : true,
   "supernew" : true,
   "undef" : true,
   "unused" : true

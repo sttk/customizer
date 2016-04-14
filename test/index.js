@@ -1,14 +1,14 @@
 'use strict';
 
-const fs = require('fs');
-const path = require('path');
-const lab = exports.lab = require('lab').script();
-const assert = require('assert');
+var fs = require('fs');
+var path = require('path');
+var lab = exports.lab = require('lab').script();
+var assert = require('assert');
 
-const Customizer = require('../');
+var Customizer = require('../');
 
-const testdir = path.resolve(__dirname, 'testcases');
-const testfiles = fs.readdirSync(testdir)
+var testdir = path.resolve(__dirname, 'testcases');
+var testfiles = fs.readdirSync(testdir)
   .filter(function(filename) { return path.extname(filename) === '.js'; })
   .map(function(filename) { return path.join(testdir, filename); });
 
