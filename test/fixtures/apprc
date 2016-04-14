@@ -1,0 +1,4 @@
+// Color mapping of help
+colors.help.title = 'cyan';
+colors.help.command.description = 'white';
+colors.help.command.option.description = 'gray';

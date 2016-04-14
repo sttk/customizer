@@ -1,0 +1,10 @@
+language: node_js
+
+node_js:
+  - "0.10"
+  - "0.12"
+  - "4"
+  - "stable"
+
+script:
+  - gulp unit --js=tests/test.js --report-file=tests/test.json

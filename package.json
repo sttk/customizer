@@ -1,0 +1,38 @@
+{
+  "name": "customizer",
+  "version": "0.1.0",
+  "description": "Load customizing files in which chain style options are written.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jshint index.js && lab test/*.js -cv"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sttk/customizer.git"
+  },
+  "keywords": [
+    "customize",
+    "configure",
+    "loader",
+    "chain-style",
+    "option"
+  ],
+  "author": "sttk",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sttk/customizer/issues"
+  },
+  "homepage": "https://github.com/sttk/customizer#readme",
+  "dependencies": {
+    "lodash.isarray": "^4.0.0",
+    "lodash.isfunction": "^3.0.8",
+    "lodash.isplainobject": "^4.0.4",
+    "lodash.isundefined": "^3.0.1",
+    "semver": "^5.1.0"
+  },
+  "devDependencies": {
+    "code": "^2.2.0",
+    "jshint": "^2.9.1",
+    "lab": "^10.3.1"
+  }
+}
