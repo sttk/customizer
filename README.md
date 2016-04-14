@@ -140,7 +140,7 @@ This program is free software under [MIT](http://opensource.org/licenses/MIT) Li
 See the file LICENSE in this distribution for mode details.
 
 
-[npm-image]: http://img.shields.io/badge/npm-v0.1.0-blue.svg
+[npm-image]: http://img.shields.io/badge/npm-v1.0.0-blue.svg
 [npm-url]: https://www.npmjs.org/package/customizer
 [travis-image]: https://travis-ci.org/sttk/customizer.svg?branch=master
 [travis-url]: https://travis-ci.org/sttk/customizer

@@ -1,6 +1,6 @@
 {
   "name": "customizer",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Load customizing files in which chain style options are written.",
   "main": "index.js",
   "scripts": {
