@@ -72,10 +72,10 @@ customizer.customize(filepath, function(e) {
 customizer.enumerated.colors = function(key, color) {
   console.log(key + ' = "' + color + '"');
 };
-customizer.enumerated[optname].before = function() {
+customizer.enumerated.colors.before = function() {
   console.log('// Color mapping');
 };
-customizer.enumerated[optname].after = function() {
+customizer.enumerated.colors.after = function() {
   console.log();
 };
 
